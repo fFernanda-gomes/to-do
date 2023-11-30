@@ -7,6 +7,8 @@ app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 // config pra usar o handlebars, só da pra trabalhar com ele se usar essas duas linhas
 
+app.use(express.static('public'))
+
 app.get("/", (req, rep) => {
   rep.render("home")
 })
